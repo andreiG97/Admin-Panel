@@ -1,0 +1,42 @@
+.user-add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    margin-left: 35%;
+   
+}
+
+
+
+.user-add-form, form input{
+    border-radius: 3px;
+    border-style: solid;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    padding-left: 10%;
+        
+}
+
+.user-add-form, form button{
+    width: 7em;
+}
+
+.user-add-form label {
+    padding-bottom: 5px;
+  }
+
+  #add-user {
+    border: 1px solid #525050;
+    background-color: #757373;
+    color: #ffffff;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.5s;
+    outline: none;
+  }
+  
+  #add-user:hover {
+    background-color: #292525;
+    border: 1px solid #c9c1c1;
+  }
