@@ -3,9 +3,9 @@ import './UserItem.css'
 
 
 function UserItem(props) {
-    const{name, email, salariu, isGoldClient, imagine, deleteUser, id} = props
+    const{name, email, salariu, isGoldClient, imagine, deleteUser, id, editUser} = props
 
-    console.log(id);
+    
     
     
     return(
@@ -22,6 +22,7 @@ function UserItem(props) {
             </li>
             <li>
             <button className='trash' onClick={ () => deleteUser(id)} >X</button>
+            <button className='change' onClick={editUser}>&#9998;</button>
             </li>
             </ul>
 

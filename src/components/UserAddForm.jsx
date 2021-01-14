@@ -13,27 +13,27 @@ class UserAddForm extends React.Component {
     }
 
     
-    nameChangeHandler(e){
-        let name = e.target.value;
+    // nameChangeHandler(e){
+    //     let name = e.target.value;
        
-        this.setState({
-            name: name
-        })
-    }
-    mailChangeHandler(e){
-        let mail = e.target.value;
+    //     this.setState({
+    //         name: name
+    //     })
+    // }
+    // mailChangeHandler(e){
+    //     let mail = e.target.value;
        
-        this.setState({
-            email: mail
-        })
-    }
-    goldChangeHandler(e){
-        let check = e.target.checked;
+    //     this.setState({
+    //         email: mail
+    //     })
+    // }
+    // goldChangeHandler(e){
+    //     let check = e.target.checked;
        
-        this.setState({
-            isGoldClient: check
-        })
-    }
+    //     this.setState({
+    //         isGoldClient: check
+    //     })
+    // }
     
     // handleSubmit(event) {
     //     event.preventDefault();
@@ -50,7 +50,8 @@ class UserAddForm extends React.Component {
  
     render(){
         
-        const {name, email, isGoldClient} = this.state;
+      //  const {name, email, isGoldClient} = this.state;
+        const {name,  email, isGoldClient, mailChangeHandler, nameChangeHandler, goldChangeHandler, edit} = this.props;
         return(
             <form className='user-add-form' onSubmit={(event) => this.props.addUser(event, name, email, isGoldClient)}>
                 <h2>Login</h2>
@@ -63,8 +64,8 @@ class UserAddForm extends React.Component {
                 maxLength='18'
                 minLength='3'
                 required
-                value={this.state.name}
-                onChange={(e) => this.nameChangeHandler(e)}
+                value={name}
+                onChange={nameChangeHandler}
                 />
 
                 <label htmlFor="email" >Email </label>
@@ -73,8 +74,8 @@ class UserAddForm extends React.Component {
                 id='email'
                 placeholder='Email'
                 required
-                value={this.state.email}
-                onChange={(e) => this.mailChangeHandler(e)}
+                value={email}
+                onChange={mailChangeHandler}
                   
                 />
 
@@ -82,11 +83,11 @@ class UserAddForm extends React.Component {
                 <input 
                 type="checkbox" 
                 id='gold'
-                checked={this.state.isGoldClient}
-                onChange={(e) => this.goldChangeHandler(e)}
+                checked={isGoldClient}
+                onChange={goldChangeHandler}
                 />
 
-                <button id='add-user' type='submit'>Add User</button>
+                <button id='add-user' type='submit'> {edit ? 'edit' : 'Add User'} </button>
             </form>
         );
     }

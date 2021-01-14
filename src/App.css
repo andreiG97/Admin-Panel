@@ -31,6 +31,14 @@ li label{
   width: 25%;
 }
 
+.colors .hide button{
+  border-radius: 5px;
+  cursor: pointer;
+}
+.colors .hide button:hover{
+   background-color: aliceblue;
+}
+
 .btn {
   display: flex;
   justify-content: flex-end;

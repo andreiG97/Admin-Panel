@@ -6,6 +6,7 @@ class UserList extends React.Component {
     render() {
         const users = this.props.users;
         const deleteUser = this.props.deleteUser;
+        const editUser = this.props.editUser
         const imagine = this.props.imagine
         console.log(this.props);
         return(
@@ -22,8 +23,7 @@ class UserList extends React.Component {
                             isGoldClient={user.isGoldClient}
                             key={index}
                             deleteUser={deleteUser}
-        
-                                
+                            editUser={() => editUser(user.id)}
                         />
                    );
                 })

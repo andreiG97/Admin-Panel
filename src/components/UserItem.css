@@ -13,7 +13,7 @@
   ul li{
     text-decoration: none;
     text-align: center;
-    width: 10%;
+    width: 5%;
   }
 
   ul{
@@ -37,21 +37,34 @@
   }
   
   #container-item .trash {
-    border: 1px solid #999999;
-    background-color: #f2f2f2;
-    border-radius: 3px;
-    font-family: "Roboto", sans-serif;
+    display: flex;
+    border: 1px solid #a8a4a4;
+    background-color: #5c5555;
+    border-radius: 5px;
     font-size: 12px;
-    color: #222222;
-    width: 70px;
+    color: #3b3838;
+    width: 50px;
     justify-content: center;
     cursor: pointer;
-    display: flex;
-    margin-left: 25%;
-    
+       
   }
   
   #container-item .trash:hover {
+    background-color: #dfdfdf;
+  }
+
+  #container-item .change {
+    display: flex;
+    border: 1px solid #a8a4a4;
+    background-color: #5c5555;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #3b3838;
+    width: 50px;
+    justify-content: center;
+    cursor: pointer;
+  }
+  #container-item .change:hover {
     background-color: #dfdfdf;
   }
   
